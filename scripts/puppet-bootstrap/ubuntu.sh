@@ -2,6 +2,7 @@
 #
 # This bootstraps Puppet on Ubuntu 14.04 LTS.
 #
+set -x
 set -e
 
 # Load up the release information

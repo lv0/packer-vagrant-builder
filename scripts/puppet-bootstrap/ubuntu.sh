@@ -41,6 +41,6 @@ echo "Puppet installed!"
 
 # Install RubyGems for the provider
 echo "Installing RubyGems..."
-apt-get install -y rubygems >/dev/null
+aptitude install -y rubygems1.9.1 >/dev/null
 gem install --no-ri --no-rdoc rubygems-update
 update_rubygems >/dev/null

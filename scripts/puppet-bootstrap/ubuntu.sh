@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# This bootstraps Puppet on Ubuntu 12.04 LTS.
+# This bootstraps Puppet on Ubuntu 14.04 LTS.
 #
 set -e
 

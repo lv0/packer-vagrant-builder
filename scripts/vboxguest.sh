@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-
-mkdir /tmp/virtualbox
-VERSION=$(cat /home/vagrant/.vbox_version)
-mount -o loop /home/vagrant/VBoxGuestAdditions_$VERSION.iso /tmp/virtualbox
-sh /tmp/virtualbox/VBoxLinuxAdditions.run
-umount /tmp/virtualbox
-rmdir /tmp/virtualbox
-rm /home/vagrant/*.iso
+set -o errexit
+set -o nounset
+aptitude install -y virtualbox-guest-dkms
+echo -e "vboxguest\nvboxsf\nvboxvideo" >> /etc/modules
+exit $?

@@ -35,7 +35,7 @@
       ["modifyvm", "{{.Name}}", "--cpus", "1"]
     ],
 
-    "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p"
+    "shutdown_command": "echo packer | sudo -S shutdown -P now"
   }],
   "post-processors": [{
     "output": "build/ubuntu-14.04-amd64.box",
